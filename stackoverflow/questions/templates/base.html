@@ -8,8 +8,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <title>Document</title>
 </head>
-<body style="background-color: dimgrey;">
-    <nav class="navbar navbar-dark bg-dark" style="padding: 20px;">
+<body style="background-color: rgb(59, 59, 59);">
+    <nav class="navbar navbar-dark bg-dark" style="padding: 10px;">
         <div class="container-fluid">
             <a class="navbar-brand" href="https://stackoverflow.com/">
                 <img src="https://stackoverflow.design/assets/img/logos/so/logo-meta.svg" alt="" width="150" height="50">
@@ -20,17 +20,20 @@
             </form>
           </div>
       </nav>
-    <div class="container" style="margin-top: 20px;">
+    <div class="container" style="padding: 12px;">
         <div class="jumbotron">
             <div class="row row-cols-2 row-cols-md-3 g-3">
                 {% for each in s.items %}
                 <div class="col">
                   <div class="card text-white bg-dark " style="padding: 10px;">
-                      <div class="col-sm-3">
-                        <img src="{{each.owner.profile_image}}" class="img-thumbnail card-img-top" alt="..." >
+                      <div class="col-sm-3" style="align-self: center;">
+                          <a href="{{each.owner.link}}">
+                            <img src="{{each.owner.profile_image}}" class="img-thumbnail card-img-top" alt="https://images.theconversation.com/files/417198/original/file-20210820-25-1j3afhs.jpeg?ixlib=rb-1.1.0&q=45&auto=format&w=926&fit=clip" >
+                          </a>
                       </div>
                     <div class="card-body">
                       <h5 class="card-title">{{each.title}}</h5>
+                      <a href="{{each.link}}" class="btn btn-light">View</a>
                     </div>
                   </div>
                 </div>
@@ -38,5 +41,10 @@
             </div>
         </div>
     </div>
+    <nav class="navbar navbar-dark bg-dark" style="padding: 2px;">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="https://github.com/akxat">My Github ❤</a>
+        </div>
+      </nav>
 </body>
 </html>
