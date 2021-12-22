@@ -14,8 +14,8 @@
             <a class="navbar-brand" href="https://stackoverflow.com/">
                 <img src="https://stackoverflow.design/assets/img/logos/so/logo-meta.svg" alt="" width="150" height="50">
               </a>
-            <form class="d-flex">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <form class="d-flex" method="get">
+              <input class="form-control me-2" type="text" placeholder="Search" aria-label="Search" name="qus">
               <button class="btn btn-outline-success" type="submit">Search</button>
             </form>
           </div>
@@ -28,7 +28,7 @@
                   <div class="card text-white bg-dark " style="padding: 10px;">
                       <div class="col-sm-3" style="align-self: center;">
                           <a href="{{each.owner.link}}">
-                            <img src="{{each.owner.profile_image}}" class="img-thumbnail card-img-top" alt="https://images.theconversation.com/files/417198/original/file-20210820-25-1j3afhs.jpeg?ixlib=rb-1.1.0&q=45&auto=format&w=926&fit=clip" >
+                            <img src="{{each.owner.profile_image}}" class="img-thumbnail card-img-top" alt="❤" >
                           </a>
                       </div>
                     <div class="card-body">
